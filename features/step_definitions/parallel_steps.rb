@@ -1,4 +1,4 @@
-Given(/^I open the BBC sitemap$/) do
+When(/^I open the BBC sitemap$/) do
   opened_sitemap = open('https://www.bbc.co.uk/news/localnews/locations/sitemap.xml')
   @xml_document = Nokogiri(opened_sitemap)
 end
