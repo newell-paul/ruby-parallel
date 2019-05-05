@@ -10,7 +10,7 @@ Then(/^I can validate the first (\d+) links in the sitemap xml$/) do |max|
     response = Net::HTTP.get_response(URI(link))
 
     valid_link = response.is_a?(Net::HTTPSuccess)
-    puts '#{index} #{link} #{valid_link}'
+    puts "#{index} #{link} #{valid_link}"
     expect(valid_link).to be true
   end
 end
